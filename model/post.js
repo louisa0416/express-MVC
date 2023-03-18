@@ -10,13 +10,13 @@ const postSchema = new mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    default: Date.now(),
+    default: Date.now, //()要移掉
     select: false,
   },
   user: {
     type: mongoose.Schema.ObjectId,
     ref: "user",
-    required: [true, "貼文姓名未填寫"],
+    required: [true, "貼文id未填寫"],
   },
   likes: {
     type: Number,
