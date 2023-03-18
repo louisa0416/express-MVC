@@ -1,6 +1,7 @@
 const handleSuccess = require("../service/handleSuccess");
 const handleError = require("../service/handleError");
 const Posts = require("../model/post");
+const User = require("../model/user");
 const posts = {
   async getPosts(req, res) {
     const allPosts = await Posts.find();
